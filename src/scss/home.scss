@@ -1,4 +1,386 @@
 //====================================================================================================
+.main {
 
-  
+  padding-top: 97px;
+  /* .main__container-fluid */
+  background-color: rgb(54, 51, 72);
+  background-image: url('@img/main/room-bg.png');
+
+  &__container-fluid {
+    max-width: 1500px;
+    position: relative;
+  }
+
+  /* .main__scroll */
+
+  &__scroll {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  /* .main__scroll-text */
+
+  &__scroll-text {
+    transform-origin: top left;
+    transform: rotate(90deg);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 2px;
+    opacity: 0.27;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  /* .main__container */
+
+  &__container {}
+
+  /* .main__wrapp */
+
+  &__wrapp {
+    display: flex;
+  }
+
+  /* .main__content */
+
+  &__content {}
+
+  /* .main__title */
+
+  &__title {
+    font-family: TenorSans;
+    padding-top: 170px;
+    max-width: 755px;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 26px;
+
+    span {
+      color: rgb(229, 176, 147);
+    }
+  }
+
+  /* .main__description */
+
+  &__description {
+    max-width: 560px;
+    font-family: TTNorms;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 43px;
+
+    span {
+      color: rgb(234, 177, 180);
+    }
+  }
+
+  /* .main__form */
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 333px;
+  }
+
+  /* .main__input */
+
+  &__input {
+    padding: 26px 37px;
+    font-size: 22px;
+    border: 1px solid rgba(250, 250, 250, 0.17);
+    border-radius: 7px;
+    box-shadow: inset 0px 1px 4px 0px rgba(193, 203, 202, 0.21);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 14px;
+
+    &::placeholder {
+      font-size: 22px;
+    }
+  }
+
+  /* .main__btn */
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    padding: 26px 37px;
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 12px 0px rgb(229, 183, 154);
+    background: linear-gradient(-45.45deg, rgb(200, 140, 97) -2.41%, rgb(235, 190, 156) 61.824%);
+  }
+
+  /* .main__img */
+
+  &__imges {
+    position: relative;
+
+  }
+
+  &__lashmaker {
+    position: absolute;
+    border-radius: 21.5px;
+    top: 17%;
+    left: 8%;
+    background-color: rgb(237, 213, 208);
+    width: 121px;
+    text-align: center;
+    padding: 10px 21px;
+    color: rgb(54, 51, 72);
+    font-size: 14px;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 90px;
+      height: 2px;
+      background-color: rgb(237, 213, 208);
+      bottom: -69%;
+      left: 83%;
+      transform: rotate(415deg);
+      z-index: 4;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgb(237, 213, 208);
+      bottom: -180%;
+      left: 137%;
+      z-index: 4;
+    }
+  }
+
+  &__eyebrow {
+    position: absolute;
+    top: 13%;
+    right: 20%;
+    border-radius: 21.5px;
+    background-color: rgb(237, 213, 208);
+    width: 121px;
+    text-align: center;
+    padding: 10px 21px;
+    color: rgb(54, 51, 72);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 4;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 127px;
+      height: 2px;
+      background-color: rgb(237, 213, 208);
+      bottom: -121%;
+      left: -85%;
+      transform: rotate(311deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgb(237, 213, 208);
+      bottom: -276%;
+      left: -72%;
+      z-index: 4;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__massage {
+    position: absolute;
+    border-radius: 21.5px;
+    top: 49%;
+    left: 13%;
+    background-color: rgb(237, 213, 208);
+    width: 121px;
+    text-align: center;
+    padding: 10px 21px;
+    color: rgb(54, 51, 72);
+    font-size: 14px;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 79px;
+      height: 2px;
+      background-color: rgb(237, 213, 208);
+      bottom: 108%;
+      left: 92%;
+      transform: rotate(506deg);
+      z-index: 4;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgb(237, 213, 208);
+      bottom: 160%;
+      left: 147%;
+      z-index: 4;
+    }
+  }
+
+  &__cosmetologist {
+    position: absolute;
+    border-radius: 21.5px;
+    top: 42%;
+    left: 56%;
+    background-color: rgb(237, 213, 208);
+    width: 121px;
+    text-align: center;
+    padding: 10px 21px;
+    color: rgb(54, 51, 72);
+    font-size: 14px;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 79px;
+      height: 2px;
+      background-color: rgb(237, 213, 208);
+      bottom: 144%;
+      left: -51%;
+      transform: rotate(593deg);
+      z-index: 4;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgb(237, 213, 208);
+      bottom: 221%;
+      left: -41%;
+      z-index: 4;
+    }
+  }
+
+  /* .main__stage */
+
+  &__stage {
+    height: 306px;
+    margin-top: -200px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* .main__item */
+
+  &__item-one {
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 93px;
+      height: 93px;
+      background-image: url('@img/main/chair.png');
+      top: -44px;
+      left: 30px;
+    }
+    
+  }
+
+  &__item-two{
+     position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 93px;
+      height: 93px;
+      background-image: url('@img/main/wardrobe.png');
+      top: -48px;
+      left: -16px;
+    }
+  }
+
+  &__item-three{
+     position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 93px;
+      height: 93px;
+      background-image: url('@img/main/brush.png');
+      top: -48px;
+      left: 19px;
+    }
+  }
+
+  &__item-four{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 93px;
+      height: 93px;
+      background-image: url('@img/main/chest.png');
+      top: -48px;
+      left: 19px;
+    }
+  }
+
+  /* .main__figure */
+  &__item_buttom{
+    align-self: flex-end;
+  }
+
+  &__figure {
+    color: rgb(105, 105, 117);
+    font-family: TenorSans;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* .main__text */
+
+  &__text {
+    color: rgb(255, 255, 255);
+    max-width: 258px;
+    font-family: TenorSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
+
+
 //====================================================================================================
