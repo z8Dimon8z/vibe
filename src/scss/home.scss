@@ -1,7 +1,6 @@
 //====================================================================================================
 .main {
-
-  padding-top: 97px;
+  @include adaptiveValue("padding-top", 97, 48);
   /* .main__container-fluid */
   background-color: rgb(54, 51, 72);
   background-image: url('@img/main/room-bg.png');
@@ -19,7 +18,6 @@
     transform: translate(0, -50%);
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
   }
 
   /* .main__scroll-text */
@@ -55,14 +53,17 @@
 
   &__title {
     font-family: TenorSans;
-    padding-top: 170px;
-    max-width: 755px;
-    font-size: 50px;
+    @include adaptiveValue("padding-top", 170, 85);
+    @include adaptiveValue("max-width",755, 377);
+    @include adaptiveValue("font-size", 50, 25);
     font-weight: 400;
     line-height: -1px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 26px;
+    @include adaptiveValue("margin-bottom", 26, 13);
+    @media (max-width: em(600)){
+      padding-top: 30px;
+    }
 
     span {
       color: rgb(229, 176, 147);
@@ -75,12 +76,13 @@
     max-width: 560px;
     font-family: TTNorms;
     font-style: italic;
-    font-size: 18px;
+    @include adaptiveValue("font-size", 18, 14);
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 43px;
+    @include adaptiveValue("margin-bottom", 43, 21);
+
 
     span {
       color: rgb(234, 177, 180);
@@ -92,22 +94,28 @@
   &__form {
     display: flex;
     flex-direction: column;
-    width: 333px;
+    @include adaptiveValue("width", 333, 166);
+    @media (max-width: em(701)){
+        width: 100%;
+    }
   }
 
   /* .main__input */
 
   &__input {
-    padding: 26px 37px;
-    font-size: 22px;
+    @include adaptiveValue("padding-top", 26, 13);
+    @include adaptiveValue("padding-bottom", 26, 13);
+    @include adaptiveValue("padding-left", 37, 18);
+    @include adaptiveValue("padding-right", 37, 18);
+    @include adaptiveValue("font-size", 22, 14);
     border: 1px solid rgba(250, 250, 250, 0.17);
     border-radius: 7px;
     box-shadow: inset 0px 1px 4px 0px rgba(193, 203, 202, 0.21);
     background-color: rgb(255, 255, 255);
-    margin-bottom: 14px;
+    @include adaptiveValue("margin-bottom", 14, 7);
 
     &::placeholder {
-      font-size: 22px;
+      @include adaptiveValue("font-size", 22, 14);
     }
   }
 
@@ -116,11 +124,17 @@
   &__btn {
     display: flex;
     align-items: center;
-    gap: 19px;
-    padding: 26px 37px;
+    @include adaptiveValue("gap", 19, 9);
+    @include adaptiveValue("padding-top", 26, 13);
+    @include adaptiveValue("padding-bottom", 26, 13);
+    @include adaptiveValue("padding-left", 37, 18);
+    @include adaptiveValue("padding-right", 37, 18);
     border-radius: 7px;
     box-shadow: inset 0px 0px 12px 0px rgb(229, 183, 154);
     background: linear-gradient(-45.45deg, rgb(200, 140, 97) -2.41%, rgb(235, 190, 156) 61.824%);
+    @media (max-width: em(600)){
+       justify-content: center; 
+    }
   }
 
   /* .main__img */
@@ -142,6 +156,29 @@
     color: rgb(54, 51, 72);
     font-size: 14px;
     font-weight: 500;
+    @media (max-width: em(1186)){
+        top: 16%;
+        left: 5%;
+    }
+    @media (max-width: em(1074)){
+        top: 15%;
+        left: 2%;
+    }
+    @media (max-width: em(970)){
+        top: 14%;
+        left: -1%;
+    }
+    @media (max-width: em(932)){
+        top: 13%;
+        left: -4%;
+    }
+    @media (max-width: em(882)){
+        top: 11%;
+        left: -7%;
+    }
+    @media (max-width: em(816)){
+        display: none;
+    }
 
     &::before {
       content: '';
@@ -181,6 +218,30 @@
     font-size: 14px;
     font-weight: 500;
     z-index: 4;
+    @media (max-width: em(1186)){
+        top: 12%;
+        left: 63%;
+    }
+    @media (max-width: em(1074)){
+        top: 11%;
+    }
+    @media (max-width: em(1018)){
+        top: 10%;
+    }
+    @media (max-width: em(970)){
+        top: 9%;
+    }
+    @media (max-width: em(932)){
+        top: 7%;
+        left: 67%;
+    }
+    @media (max-width: em(882)){
+        top: 6%;
+    }
+    @media (max-width: em(816)){
+        display: none;
+    }
+
 
     &::before {
       content: '';
@@ -210,6 +271,9 @@
     position: relative;
     width: 100%;
     height: 100%;
+    @media (max-width: em(708)){
+       display: none; 
+    }
   }
 
   &__massage {
@@ -224,6 +288,15 @@
     color: rgb(54, 51, 72);
     font-size: 14px;
     font-weight: 500;
+    @media (max-width: em(970)){
+       left: 5%; 
+    }
+    @media (max-width: em(882)){
+       left: 2%; 
+    }
+    @media (max-width: em(816)){
+        display: none;
+    }
 
     &::before {
       content: '';
@@ -262,6 +335,12 @@
     color: rgb(54, 51, 72);
     font-size: 14px;
     font-weight: 500;
+     @media (max-width: em(970)){
+       left: 64%; 
+    }
+    @media (max-width: em(816)){
+        display: none;
+    }
 
     &::before {
       content: '';
@@ -291,17 +370,33 @@
   /* .main__stage */
 
   &__stage {
-    height: 306px;
-    margin-top: -200px;
+    @include adaptiveValue("height", 306, 153);
+    @include adaptiveValue("margin-top", -200, -100);
     display: flex;
     justify-content: space-between;
+    @media (max-width: em(1074)){
+       margin-top: rem(-50); 
+    }
+    @media (max-width: em(914)){
+       margin-top: rem(0); 
+    }
+    @media (max-width: em(858)){
+       margin-top: rem(30); 
+    }
+    @media (max-width: em(460)){
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        gap: 30px;
+    }
   }
 
   /* .main__item */
 
   &__item-one {
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       width: 93px;
@@ -309,13 +404,54 @@
       background-image: url('@img/main/chair.png');
       top: -44px;
       left: 30px;
+      @media (max-width: em(902)){
+        width: 62px;
+       height: 62px;
+       background-size: cover;
+       top: -26px;
+       left: 48px;
+      }
+      @media (max-width: em(708)){
+        width: 44px;
+       height: 44px;
+       background-size: cover;
+       top: -14px;
+       left: 39px;
+      }
+      @media (max-width: em(560)){
+          left: 19px;
+      }
+      @media (max-width: em(460)){
+          left: -19px;
+      }
+
     }
-    
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 5em;
+      /* ширина в два раза меньше высоты, иначе получится полуовал */
+      height: 10em;
+      border: 2px solid rgb(200, 140, 97);
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      transform: rotate(275deg);
+      border-right: none;
+      border-top: none;
+      border-left: none;
+      top: -1px;
+      left: 215px;
+      @media (max-width: em(1048)){
+         display: none; 
+      }
+    }
+
   }
 
-  &__item-two{
-     position: relative;
-    &::before{
+  &__item-two {
+    position: relative;
+
+    &::before {
       content: '';
       position: absolute;
       width: 93px;
@@ -323,12 +459,49 @@
       background-image: url('@img/main/wardrobe.png');
       top: -48px;
       left: -16px;
+      @media (max-width: em(902)){
+        width: 62px;
+       height: 62px;
+       background-size: cover;
+       top: -25px;
+       left: 8px;
+      }
+      @media (max-width: em(708)){
+        width: 44px;
+       height: 44px;
+       background-size: cover;
+       top: -14px;
+       left: 8px;
+      }
+      @media (max-width: em(460)){
+          left: -19px;
+      }
+    }
+
+     &::after {
+      content: '';
+      position: absolute;
+      width: 5em;
+      /* ширина в два раза меньше высоты, иначе получится полуовал */
+      height: 10em;
+      border: 2px solid rgb(200, 140, 97);
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      transform: rotate(188deg);
+      border-right: none;
+      border-top: none;
+      border-left: none;
+      top: -166px;
+      left: 128px;
+      @media (max-width: em(1048)){
+         display: none; 
+      }
     }
   }
 
-  &__item-three{
-     position: relative;
-    &::before{
+  &__item-three {
+    position: relative;
+
+    &::before {
       content: '';
       position: absolute;
       width: 93px;
@@ -336,12 +509,52 @@
       background-image: url('@img/main/brush.png');
       top: -48px;
       left: 19px;
+       @media (max-width: em(902)){
+        width: 62px;
+       height: 62px;
+       background-size: cover;
+       top: -26px;
+       left: 48px;
+      }
+      @media (max-width: em(708)){
+        width: 44px;
+       height: 44px;
+       background-size: cover;
+       top: -14px;
+       left: 39px;
+      }
+      @media (max-width: em(560)){
+          left: 19px;
+      }
+       @media (max-width: em(460)){
+          left: -19px;
+      }
+    }
+
+     &::after {
+      content: '';
+      position: absolute;
+      width: 5em;
+      /* ширина в два раза меньше высоты, иначе получится полуовал */
+      height: 10em;
+      border: 2px solid rgb(200, 140, 97);
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      transform: rotate(265deg);
+      border-right: none;
+      border-top: none;
+      border-left: none;
+      top: 7px;
+      left: 273px;
+      @media (max-width: em(1048)){
+         display: none; 
+      }
     }
   }
 
-  &__item-four{
+  &__item-four {
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       width: 93px;
@@ -349,36 +562,66 @@
       background-image: url('@img/main/chest.png');
       top: -48px;
       left: 19px;
+       @media (max-width: em(902)){
+        width: 62px;
+       height: 62px;
+       background-size: cover;
+       top: -26px;
+       left: 48px;
+      }
+      @media (max-width: em(708)){
+        width: 44px;
+       height: 44px;
+       background-size: cover;
+       top: -14px;
+       left: 39px;
+      }
+      @media (max-width: em(560)){
+          left: 19px;
+      }
+       @media (max-width: em(460)){
+          left: -19px;
+      }
     }
   }
 
   /* .main__figure */
-  &__item_buttom{
+  &__item_buttom {
     align-self: flex-end;
+    @media (max-width: em(460)){
+        align-self: flex-start;
+    }
   }
 
   &__figure {
     color: rgb(105, 105, 117);
     font-family: TenorSans;
-    font-size: 80px;
+    @include adaptiveValue("font-size", 80, 40);
     font-weight: 400;
     line-height: -1px;
     letter-spacing: 0px;
     text-align: center;
     text-transform: uppercase;
+    @media (max-width: em(460)){
+       text-align: left; 
+    }
   }
 
   /* .main__text */
 
   &__text {
     color: rgb(255, 255, 255);
-    max-width: 258px;
+    @include adaptiveValue("max-width", 258, 200);
     font-family: TenorSans;
-    font-size: 18px;
+    @include adaptiveValue("font-size", 18, 14);
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0px;
     text-align: center;
+    @media (max-width: em(460)){
+        max-width: 100%;
+        text-align: left;
+    }
   }
 }
 
