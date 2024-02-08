@@ -676,12 +676,49 @@
 //====================================================================================================
 .office {
   padding-top: 168px;
+  @include adaptiveValue("padding-top", 168, 84);
   padding-bottom: 10px;
   border-radius: 500% 0 400% 400% / 0% 0 50% 50%;
   /* .office__container */
   background-color: rgb(54, 51, 72);
-  @media (max-width: em(1702)){
-      padding-bottom: 30px;
+  position: relative;
+
+  @media (max-width: em(1700)) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: em(1060)) {
+    padding-bottom: 60px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('@img/ofice/decor-right-bg.png');
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 1000px;
+    top: -30%;
+    right: 0;
+
+    @media (max-width: em(1900)) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('@img/ofice/decor-left-bg.png');
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 1000px;
+    top: 15%;
+    left: 0;
+
+    @media (max-width: em(1900)) {
+      display: none;
+    }
   }
 
   &__container {}
@@ -690,15 +727,16 @@
 
   &__title {
     max-width: 1000px;
+    @include adaptiveValue("max-width", 1000, 500);
     margin: 0 auto;
     font-family: TenorSans;
-    font-size: 50px;
+    @include adaptiveValue("font-size", 50, 25);
     font-weight: 400;
     line-height: -1px;
     letter-spacing: 0px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    @include adaptiveValue("margin-bottom", 50, 25);
 
     span {
       color: rgb(206, 148, 107);
@@ -710,6 +748,12 @@
   &__wrapp {
     display: flex;
     gap: 136px;
+    @include adaptiveValue("gap", 136, 68);
+
+    @media (max-width: em(980)) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   /* .office__images */
@@ -724,6 +768,8 @@
   &__img {
     background-image: url('@img/ofice/bg.png');
     background-size: contain;
+    @include adaptiveValue("width", 700, 350);
+    @include adaptiveValue("height", 800, 400);
   }
 
   /* .office__link */
@@ -743,6 +789,10 @@
       height: 400px;
       top: -106%;
       right: -109%;
+
+      @media (max-width: em(600)) {
+        display: none;
+      }
     }
 
     &::after {
@@ -759,13 +809,22 @@
       border-left: none;
       top: -76px;
       left: 115px;
+
+      @media (max-width: em(600)) {
+        display: none;
+      }
     }
-    
+
   }
 
   /* .office__link-play */
 
-  &__link-play {}
+  &__link-play {
+    @media (max-width: em(600)) {
+      width: 70px;
+      height: 70px;
+    }
+  }
 
   /* .office__box */
 
@@ -773,6 +832,11 @@
     position: absolute;
     top: 20%;
     right: 10%;
+
+    @media (max-width: em(600)) {
+      top: 13%;
+      right: 22%;
+    }
   }
 
   /* .office__content */
@@ -785,12 +849,17 @@
     color: rgb(255, 255, 255);
     font-family: TTNorms;
     font-size: 20px;
+    @include adaptiveValue("font-size", 20, 18);
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 20px;
-    padding-top: 110px;
+    @include adaptiveValue("margin-bottom", 20, 10);
+    @include adaptiveValue("padding-top", 110, 55, );
+
+    @media (max-width: em(980)) {
+      padding-top: 0;
+    }
   }
 
   /* .office__description */
@@ -798,11 +867,12 @@
   &__description {
     font-family: TT Norms;
     font-size: 16px;
+    @include adaptiveValue("font-size", 16, 14);
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 30px;
+    @include adaptiveValue("margin-bottom", 30, 15);
   }
 
   /* .office__btn */
@@ -814,6 +884,10 @@
     @include adaptiveValue("gap", 19, 9);
     border-radius: 7px;
     box-shadow: inset 0px 0px 12px 0px rgb(229, 183, 154);
-background: linear-gradient(-45.45deg, rgb(200, 140, 97) -1.242%,rgb(235, 190, 156) 62.962%);
+    background: linear-gradient(-45.45deg, rgb(200, 140, 97) -1.242%, rgb(235, 190, 156) 62.962%);
+
+    @media (max-width: em(980)) {
+      margin: 0 auto;
+    }
   }
 }
