@@ -18,6 +18,7 @@
 		"bem": "fls-bemtree-from-html"
 	},
 	"devDependencies": {
+		"@fancyapps/ui": "^5.0.33",
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
 		"del": "^6.1.1",
