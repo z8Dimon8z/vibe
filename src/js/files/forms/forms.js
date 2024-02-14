@@ -180,7 +180,10 @@ export function formSubmit(options = { validate: true }) {
 					body: formData
 				});
 				if (response.ok) {
-					let responseResult = await response.json();
+          // Добавил строчки для работы формы
+					let result = await response.json();
+            console.log(result.message2);
+            // Добавил строчки для работы формы
 					form.classList.remove('_sending');
 					formSent(form);
 				} else {

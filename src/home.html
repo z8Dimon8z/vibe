@@ -20,8 +20,11 @@
                 <p class="main__description">Занимайтесь любимым делом, зарабатывая <span>до 1 000 000 руб./год</span>,
                   арендуя локации в одной из 2 точек сети Vibe Coworking
                 </p>
-                <form class="main__form" action="#">
-                  <input class="main__input" type="text" placeholder="telephone:">
+                <form data-ajax class="main__form" method="POST" action="files/mail.php">
+                  <input type="hidden" name="project_name" value="Заявка Vibe 2024">
+                  <input type="hidden" name="admin_email" value="dima-lysak@yandex.ru">
+                  <input type="hidden" name="form_subject" value="Заявка с главной страницы">
+                  <input class="main__input" type="tel" placeholder="telephone:" name="tel">
                   <button class="main__btn" button="submit">ЗАБРОНИРОВАТЬ ВРЕМЯ
                     <svg width="16.000000" height="22.000000" viewBox="0 0 16 22" fill="none"
                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
