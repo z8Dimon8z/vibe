@@ -891,3 +891,137 @@
     }
   }
 }
+
+// ========
+.popup {
+
+  /* .popup__wrapper */
+
+  &__wrapper {}
+
+  /* .popup__content */
+
+  &__content {}
+
+  /* .popup__close */
+
+  &__close {
+    img{
+    @include adaptiveValue("width", 34, 20);
+    @include adaptiveValue("height", 34, 20);
+    }
+    
+  }
+}
+
+.answer {
+  text-align: center;
+
+  /* .answer__title */
+  &__title {
+    font-family: TenorSans;
+    font-size: 40px;
+    @include adaptiveValue("font-size", 40, 20);
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0px;
+    text-align: center;
+    @include adaptiveValue("margin-top", 30, 15);
+    @include adaptiveValue("margin-bottom", 30, 15);
+
+    span {
+      color: rgb(206, 148, 107);
+    }
+  }
+
+  /* .answer__wrapp */
+
+  &__wrapp {
+    @include adaptiveValue("padding", 40, 20);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    @include adaptiveValue("border-radius", 20, 10);
+    position: relative;
+    @media (max-width: em(674)){
+       width: 100%;
+       justify-content: center; 
+    }
+  }
+
+  /* .answer__box */
+
+  &__box {}
+
+  /* .answer__text */
+
+  &__text {
+    color: rgb(49, 49, 64);
+    font-family: TTNorms;
+    @include adaptiveValue("font-size", 30, 15);
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 30, 15);
+    max-width: 472px;
+  }
+
+  /* .answer__tel */
+
+  &__tel {
+    color: rgb(49, 49, 64);
+    font-family: TTNorms;
+    @include adaptiveValue("font-size", 37, 18);
+    font-weight: 700;
+    line-height: -1px;
+    letter-spacing: -1.71px;
+    text-align: center;
+  }
+
+  /* .answer__teligram */
+
+  &__teligram {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .answer__teligram-link */
+
+  &__teligram-link {}
+
+  /* .answer__teligram-img */
+
+  &__teligram-img {
+    @include adaptiveValue("width", 210, 105);
+    @include adaptiveValue("height", 210, 105);
+  }
+
+  /* .answer__teligram-text */
+
+  &__teligram-text {
+    color: rgb(49, 49, 64);
+    font-family: TTNorms;
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    max-width: 190px;
+  }
+
+  /* .answer__img */
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: -26%;
+    width: 513px;
+    height: 730px;
+    @include adaptiveValue("width", 513, 256);
+    @include adaptiveValue("height", 730, 365);
+    @media (max-width: em(674)){
+        display: none;
+    }
+  }
+}

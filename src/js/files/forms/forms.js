@@ -180,7 +180,7 @@ export function formSubmit(options = { validate: true }) {
 					body: formData
 				});
 				if (response.ok) {
-          // Добавил строчки для работы формы
+          // Добавил строчки для работы формы так-же надо добавить строчки в файле mail.php
 					let result = await response.json();
             console.log(result.message2);
             // Добавил строчки для работы формы
