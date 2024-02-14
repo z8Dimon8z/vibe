@@ -906,11 +906,11 @@
   /* .popup__close */
 
   &__close {
-    img{
-    @include adaptiveValue("width", 34, 20);
-    @include adaptiveValue("height", 34, 20);
+    img {
+      @include adaptiveValue("width", 34, 20);
+      @include adaptiveValue("height", 34, 20);
     }
-    
+
   }
 }
 
@@ -943,9 +943,10 @@
     background-color: #fff;
     @include adaptiveValue("border-radius", 20, 10);
     position: relative;
-    @media (max-width: em(674)){
-       width: 100%;
-       justify-content: center; 
+
+    @media (max-width: em(674)) {
+      width: 100%;
+      justify-content: center;
     }
   }
 
@@ -1020,8 +1021,147 @@
     height: 730px;
     @include adaptiveValue("width", 513, 256);
     @include adaptiveValue("height", 730, 365);
-    @media (max-width: em(674)){
-        display: none;
+
+    @media (max-width: em(674)) {
+      display: none;
+    }
+  }
+}
+
+.form {
+  text-align: center;
+
+  /* .answer__title */
+  &__title {
+    font-family: TenorSans;
+    font-size: 40px;
+    @include adaptiveValue("font-size", 40, 20);
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0px;
+    text-align: center;
+    @include adaptiveValue("margin-top", 30, 15);
+    @include adaptiveValue("margin-bottom", 30, 15);
+
+    span {
+      color: rgb(206, 148, 107);
+    }
+  }
+
+  /* .answer__wrapp */
+
+  &__wrapp {
+    @include adaptiveValue("padding", 40, 20);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    @include adaptiveValue("border-radius", 20, 10);
+    position: relative;
+
+    @media (max-width: em(898)) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  /* .answer__box */
+
+  &__box {}
+
+  /* .answer__text */
+
+  &__text {
+    @include adaptiveValue("font-size", 30, 15);
+    color: rgb(52, 52, 63);
+    font-family: TTNorms;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+
+  /* .answer__tel */
+
+  &__tel {
+    @include adaptiveValue("font-size", 16, 14);
+    color: rgb(52, 52, 63);
+    font-family: TTNorms;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
+
+  /* .answer__teligram */
+
+  &__sending {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+  }
+   &__input {
+    width: 100%;
+    @include adaptiveValue("padding-top", 26, 13);
+    @include adaptiveValue("padding-bottom", 26, 13);
+    @include adaptiveValue("padding-left", 37, 18);
+    @include adaptiveValue("padding-right", 37, 18);
+    @include adaptiveValue("font-size", 22, 14);
+    border: 1px solid rgba(250, 250, 250, 0.17);
+    border-radius: 7px;
+    box-shadow: inset 0px 1px 4px 0px rgba(193, 203, 202, 0.21);
+    background-color: rgb(255, 255, 255);
+    @include adaptiveValue("margin-bottom", 14, 7);
+
+    &::placeholder {
+      @include adaptiveValue("font-size", 22, 14);
+    }
+  }
+
+  /* .main__btn */
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 19, 9);
+    @include adaptiveValue("padding-top", 26, 13);
+    @include adaptiveValue("padding-bottom", 26, 13);
+    @include adaptiveValue("padding-left", 37, 18);
+    @include adaptiveValue("padding-right", 37, 18);
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 12px 0px rgb(229, 183, 154);
+    background: linear-gradient(-45.45deg, rgb(200, 140, 97) -2.41%, rgb(235, 190, 156) 61.824%);
+
+    @media (max-width: em(600)) {
+      justify-content: center;
+    }
+  }
+
+
+  /* .answer__img */
+
+  &__img {
+    position: absolute;
+    right: -11%;
+    top: -8%;
+    @include adaptiveValue("width", 624, 208);
+    @include adaptiveValue("height", 384, 192);
+    @media (max-width: em(1094)){
+       right: -5%;
+        top: -2%;  
+    }
+    @media (max-width: em(986)){
+        right: 3%;
+        top: -2%;
+    }
+
+    @media (max-width: em(898)) {
+      display: none;
     }
   }
 }

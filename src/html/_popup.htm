@@ -1,21 +1,62 @@
- 
-<div id="popup" aria-hidden="true" class="popup">
-  <div class="popup__wrapper">
-    <div class="popup__content answer">
-      <button data-close type="button" class="popup__close"><img src="@img/form/icon-close.svg" alt="иконка крестик"></button>
-      <h2 class="answer__title"><span>СПАСИБО,</span> ВАША ЗАЯВКА<br> ОТПРАВЛЕНА</h2>
-      <div class="answer__wrapp">
-        <div class="answer__box">
-        <p class="answer__text">Долго ждать? Наберите нас прямо сейчас:</p>
-        <p class="answer__tel">+7 (654) 876 09 09</p>
-        <div class="answer__teligram">
-          <a class="answer__teligram-link" href="#"><img class="answer__teligram-img" src="@img/form/va.png" alt="картинка телеграмма"></a>
-          <p class="answer__teligram-text">Или кликнете, чтобы перейти в ватсап чат с нами</p>
-        </div>
-        </div>
-        <img src="@img/form/decor.png" alt="картинка цветов" class="answer__img"></img>
-			</div>
-		</div>
-	</div>
-</div>
+ <div id="popup" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+     <div class="popup__content answer">
+       <button data-close type="button" class="popup__close"><img src="@img/form/icon-close.svg"
+           alt="иконка крестик"></button>
+       <h2 class="answer__title"><span>СПАСИБО,</span> ВАША ЗАЯВКА<br> ОТПРАВЛЕНА</h2>
+       <div class="answer__wrapp">
+         <div class="answer__box">
+           <p class="answer__text">Долго ждать? Наберите нас прямо сейчас:</p>
+           <p class="answer__tel">+7 (654) 876 09 09</p>
+           <div class="answer__teligram">
+             <a class="answer__teligram-link" href="#"><img class="answer__teligram-img" src="@img/form/va.png"
+                 alt="картинка телеграмма"></a>
+             <p class="answer__teligram-text">Или кликнете, чтобы перейти в ватсап чат с нами</p>
+           </div>
+         </div>
+         <img src="@img/form/decor.png" alt="картинка цветов" class="answer__img"></img>
+       </div>
+     </div>
+   </div>
+ </div>
 
+ <div id="popup-form" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+     <div class="popup__content form">
+       <button data-close type="button" class="popup__close"><img src="@img/form/icon-close.svg"
+           alt="иконка крестик"></button>
+       <h2 class="form__title">УКАЖИТЕ ВАШИ ДАННЫЕ И МЫ СВЯЖЕМСЯ С <br> ВАМИ <span>В ТЕЧЕНИИ 15 МИНУТ</span> </h2>
+       <div class="form__wrapp">
+         <div class="form__box">
+           <p class="form__text">Ваши<br>контакты</p>
+           <p class="form__tel">Оставьте ваш телефон и мы 
+свяжемся с вами</p>
+           <div class="form__sending">
+             <form data-ajax data-popup-message="#popup" class="form__form" method="POST" action="files/mail.php">
+                  <input type="hidden" name="project_name" value="Заявка Vibe 2024">
+                  <input type="hidden" name="admin_email" value="dima-lysak@yandex.ru">
+                  <input type="hidden" name="form_subject" value="Заявка с модального окна">
+                  <input class="form__input" type="tel" placeholder="telephone:" name="tel">
+                  <button class="form__btn" button="submit">ЗАБРОНИРОВАТЬ ВРЕМЯ
+                    <svg width="16.000000" height="22.000000" viewBox="0 0 16 22" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <desc>
+                        Created with Pixso.
+                      </desc>
+                      <defs />
+                      <path id="Shape"
+                        d="M14.2781 8.67676L14.2482 8.67676C13.8394 8.67383 13.4445 8.8291 13.1405 9.11133C12.8944 8.4082 12.269 7.90234 11.5364 7.90234C11.0875 7.90625 10.6586 8.09668 10.3475 8.43066C10.0615 7.83301 9.48773 7.42773 8.828 7.42773L8.79614 7.42773C8.44257 7.42188 8.0976 7.54102 7.81787 7.76367L7.81787 3.50195C7.81787 2.47266 7.0412 1.63477 6.0965 1.63477C5.15289 1.63477 4.38025 2.47168 4.3797 3.50098L4.37183 11.9561L3.90833 11.375C3.50189 10.8525 2.90363 10.5283 2.25629 10.4795C1.62231 10.4346 0.998657 10.6621 0.53302 11.1094L0.129761 11.4541C-0.000305176 11.5654 -0.0374146 11.7549 0.0404663 11.9092L3.96155 19.6904C4.67853 21.1123 6.0426 22 7.52155 22L11.9404 22L11.9404 21.9951C14.1809 21.9951 15.9975 19.9883 15.9998 17.5244C16.0002 16.916 15.9993 16.3936 15.9984 15.9346C15.9977 15.5625 15.997 15.2324 15.9973 14.9336C15.9995 13.2275 15.998 12.5527 15.994 10.7764L15.994 10.7754L15.9935 10.5303C15.9912 9.50293 15.2202 8.67676 14.2781 8.67676ZM15.2723 17.5254C15.2734 16.4219 15.2744 15.5977 15.2751 14.9307L15.2751 14.9033C15.2774 13.1436 15.2783 12.4834 15.2739 10.5312C15.2725 9.91113 14.826 9.41699 14.2781 9.41699L14.2482 9.41699C13.6989 9.41699 13.2399 9.90332 13.2399 10.5254L13.2399 11.4219C13.2399 11.626 13.0794 11.792 12.8814 11.792C12.6835 11.792 12.5229 11.626 12.5229 11.4219L12.5229 9.76562C12.5229 9.14355 12.0878 8.6377 11.5387 8.6377C10.9865 8.6377 10.5513 9.14355 10.5513 9.76562L10.5513 11.5215C10.5513 11.7256 10.3908 11.8916 10.1928 11.8916C9.99487 11.8916 9.83435 11.7256 9.83435 11.5215L9.83435 9.2832C9.83435 8.66211 9.37732 8.16797 8.828 8.16797L8.79614 8.16797C8.26141 8.16797 7.81787 8.63574 7.81787 9.23535L7.81787 11.7549C7.81787 11.959 7.65735 12.125 7.45941 12.125C7.26141 12.125 7.10089 11.959 7.10089 11.7549L7.10089 9.30957C7.10089 9.30078 7.10004 9.29199 7.10004 9.2832C7.10004 9.2627 7.10089 9.24316 7.10089 9.22266L7.10089 3.50195C7.10089 2.88086 6.64581 2.375 6.09686 2.375C5.54791 2.375 5.09283 2.87988 5.09247 3.50098L5.086 12.9893C5.086 13.1455 4.99078 13.2852 4.84833 13.3369C4.70581 13.3896 4.54651 13.3447 4.45062 13.2236L3.35327 11.8457C3.07166 11.4805 2.65613 11.2539 2.20575 11.2178C1.76514 11.1885 1.33246 11.3486 1.01086 11.6611C1.00635 11.665 1.00177 11.6699 0.99707 11.6738L0.81012 11.835L4.59784 19.3486C5.19067 20.5244 6.3111 21.2588 7.52167 21.2588L11.9194 21.2588C13.7663 21.2588 15.2704 19.582 15.2723 17.5254Z"
+                        clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
+                      <path id="Path"
+                        d="M3.24078 3.66211C3.43878 3.66211 3.5993 3.49707 3.5993 3.29199C3.60504 1.87988 4.7157 0.738281 6.08344 0.738281C7.45142 0.738281 8.56189 1.87988 8.56763 3.29199C8.56763 3.49707 8.72815 3.66211 8.92615 3.66211C9.12408 3.66211 9.28461 3.49707 9.28461 3.29199C9.27795 1.47168 7.8468 0 6.08344 0C4.32025 0 2.88898 1.47168 2.88232 3.29199C2.88232 3.49707 3.04285 3.66211 3.24078 3.66211Z"
+                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+                    </svg>
+                  </button>
+                </form>
+           </div>
+         </div>
+         <img src="@img/form/phone-old.png" alt="картинка цветов" class="form__img"></img>
+       </div>
+     </div>
+   </div>
+ </div>
