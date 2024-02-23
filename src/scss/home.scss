@@ -893,6 +893,7 @@
 }
 
 // ========
+// первый попап 
 .popup {
 
   /* .popup__wrapper */
@@ -1028,6 +1029,7 @@
   }
 }
 
+// второй папап с формой
 .form {
   text-align: center;
 
@@ -1104,7 +1106,8 @@
     width: 100%;
 
   }
-   &__input {
+
+  &__input {
     width: 100%;
     @include adaptiveValue("padding-top", 26, 13);
     @include adaptiveValue("padding-bottom", 26, 13);
@@ -1151,17 +1154,289 @@
     top: -8%;
     @include adaptiveValue("width", 624, 208);
     @include adaptiveValue("height", 384, 192);
-    @media (max-width: em(1094)){
-       right: -5%;
-        top: -2%;  
+
+    @media (max-width: em(1094)) {
+      right: -5%;
+      top: -2%;
     }
-    @media (max-width: em(986)){
-        right: 3%;
-        top: -2%;
+
+    @media (max-width: em(986)) {
+      right: 3%;
+      top: -2%;
     }
 
     @media (max-width: em(898)) {
       display: none;
     }
   }
+}
+
+// =======================================
+.coworking {
+
+  /* .coworking__container */
+  color: rgb(52, 52, 63);
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  &__container {}
+
+  /* .coworking__top */
+
+  &__top {
+    margin-bottom: 42px;
+  }
+
+  /* .coworking__title */
+
+  &__title {
+    font-family: TenorSans;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: -1px;
+    text-align: center;
+    max-width: 838px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    span {
+      color: rgb(206, 148, 107);
+    }
+  }
+
+  /* .coworking__description */
+
+  &__description {
+    color: rgb(52, 52, 63);
+    font-family: TT Norms;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 905px;
+    margin-bottom: 30px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  /* .coworking__link-video */
+
+  &__link-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('@img/coworking/video-decor-right.png');
+      background-repeat: no-repeat;
+      width: 323px;
+      height: 305px;
+      top: -15%;
+      right: 5%;
+      z-index: -1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('@img/coworking/video-decor-left.png');
+      background-repeat: no-repeat;
+      width: 323px;
+      height: 318px;
+      bottom: -15%;
+      left: 5%;
+      z-index: -1;
+    }
+
+  }
+
+  /* .coworking__img */
+
+  &__img {}
+
+  /* .coworking__text */
+
+  &__text {
+    font-family: TenorSans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 55px;
+    margin-bottom: 23px;
+  }
+
+  /* .coworking__box */
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 105px;
+  }
+
+  /* .coworking__list */
+
+  &__list {}
+
+  /* .coworking__item */
+
+  &__item {
+    margin-bottom: 10px;
+    padding-left: 35px;
+    color: rgb(52, 52, 63);
+    font-family: TTNorms;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('@img/coworking/check-mark.png');
+      background-repeat: no-repeat;
+      width: 31px;
+      height: 26px;
+      bottom: -7%;
+      left: 1%;
+    }
+  }
+
+  /* .coworking__buttom */
+
+  &__buttom {}
+
+  /* .coworking__slider */
+
+  &__slider {}
+
+  /* .coworking__wrapper */
+
+  &__wrapper {}
+
+  /* .coworking__slide */
+
+  &__slide {}
+
+  /* .coworking__wrapp */
+
+  &__wrapp {
+    display: flex;
+    gap: 64px;
+  }
+
+  /* .coworking__slider-img */
+
+  &__slider-img {}
+
+  /* .coworking__slider-content */
+
+  &__slider-content {}
+
+  /* .coworking__slider-title */
+
+  &__slider-title {
+    padding-top: 32px;
+    color: rgb(52, 52, 63);
+    font-family: TTNorms;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 338px;
+    margin-bottom: 20px;
+  }
+
+  /* .coworking__slider-text */
+
+  &__slider-text {
+    color: rgb(52, 52, 63);
+    font-family: TTNorms;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 45px;
+    max-width: 536px;
+  }
+
+  /* .coworking__slider-btn */
+
+  &__slider-btn {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    @include adaptiveValue("gap", 19, 9);
+    @include adaptiveValue("padding-top", 26, 13);
+    @include adaptiveValue("padding-bottom", 26, 13);
+    @include adaptiveValue("padding-left", 37, 18);
+    @include adaptiveValue("padding-right", 37, 18);
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 12px 0px rgb(229, 183, 154);
+    background: linear-gradient(-45.45deg, rgb(200, 140, 97) -2.511%, rgb(235, 190, 156) 61.725%);
+  }
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.coworking__slider .swiper-pagination {
+  left: 65%;
+  bottom: 13%;
+  transform: translate(-50%, -50%);
+}
+
+.coworking__slider .swiper-pagination-current {
+  color: rgb(75, 77, 69);
+  font-family: TenorSans;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+.coworking__slider .swiper-pagination-total{
+  color: rgb(75, 77, 69);
+font-family: TenorSans;
+font-size: 20px;
+font-weight: 400;
+line-height: -1px;
+letter-spacing: -0.2px;
+text-align: left;
+text-transform: uppercase;
+margin-left: 2px;
+}
+
+.s-button-prev {
+  position: absolute;
+  top: 76%;
+  left: 58%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+}
+
+.s-button-next {
+  position: absolute;
+  top: 76%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
 }
