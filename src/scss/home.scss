@@ -1515,12 +1515,15 @@
 
   /* .plan__container */
   background-color: rgb(54, 51, 72);
-  padding-top: 100px;
-  padding-bottom: 174px;
+  @include adaptiveValue("padding-top", 100, 70);
+  @include adaptiveValue("padding-bottom", 174, 87);
   border-radius: 150% 150% 350% 350% / 50% 50% 0% 0%;
   background-image: url('@img/plan/room-image.png');
   background-repeat: no-repeat;
   background-position: top right;
+  @media (max-width: em(872)){
+    border-radius: 500% 500% 400% 400% / 50% 50% 0% 0%;
+  }
 
   /* .office__container */
   &__container {}
@@ -1529,12 +1532,12 @@
 
   &__title {
     font-family: TenorSans;
-    font-size: 50px;
+    @include adaptiveValue("font-size", 50, 25);
     font-weight: 400;
     line-height: -1px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    @include adaptiveValue("margin-bottom", 50, 25);
 
     span {
       color: rgb(206, 148, 107);
@@ -1545,8 +1548,12 @@
 
   &__wrapp {
     display: flex;
-    gap: 78px;
-    margin-bottom: 200px;
+    @include adaptiveValue("gap", 78, 39);
+    @include adaptiveValue("margin-bottom", 200, 100);
+    @media (max-width: em(1024)){
+       flex-direction: column; 
+       align-items: center;
+    }
   }
 
   /* .plan__content */
@@ -1557,12 +1564,12 @@
 
   &__text {
     font-family: TT Norms;
-    font-size: 20px;
+    @include adaptiveValue("font-size", 20, 14);
     font-weight: 400;
     line-height: 31px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 20px;
+    @include adaptiveValue("margin-bottom", 20, 10);
   }
 
   /* .plan__btn */
@@ -1579,12 +1586,15 @@
     border-radius: 7px;
     box-shadow: inset 0px 0px 12px 0px rgb(229, 183, 154);
     background: linear-gradient(-45.45deg, rgb(200, 140, 97) -2.511%, rgb(235, 190, 156) 61.725%);
+    @media (max-width: em(1024)){
+        margin: 0 auto;
+    }
   }
 
   /* .plan__images */
 
   &__images {
-    padding-top: 120px;
+    @include adaptiveValue("padding-top", 120, 60);
     position: relative;
 
     &::before {
@@ -1596,17 +1606,23 @@
       background-repeat: no-repeat;
       width: 100%;
       height: 100%;
+      @media (max-width: em(517)){
+         top: -10%; 
+      }
     }
 
     &::after {
       content: '';
       position: absolute;
-      top: -50%;
-      right: 45%;
+      top: -45%;
+      right: 50%;
       background-image: url('@img/plan/map.png');
       background-repeat: no-repeat;
       width: 100%;
       height: 100%;
+      @media (max-width: em(1019)){
+          display: none;
+      }
     }
   }
 
@@ -1621,24 +1637,30 @@
     letter-spacing: 0px;
     text-align: right;
     width: 120px;
-    top: -3%;
+    top: 0%;
+    @media (max-width: em(368)){
+       left: 5%; 
+    }
   }
 
   /* .plan__img */
 
-  &__img {}
+  &__img {
+    @include adaptiveValue("width", 681, 340);
+    @include adaptiveValue("height", 411, 205);
+  }
 
   /* .plan__advantages-title */
 
   &__advantages-title {
     font-family: TenorSans;
-    font-size: 50px;
+    @include adaptiveValue("font-size", 50, 25);
     font-weight: 400;
     line-height: -1px;
     letter-spacing: 0px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    @include adaptiveValue("margin-bottom", 30, 15);
 
     span {
       color: rgb(206, 148, 107);
@@ -1651,7 +1673,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 15px;
+    @include adaptiveValue("margin-bottom", 15, 10);
+    flex-wrap: wrap;
+    gap: 15px;
+    @media (max-width: em(408)){
+      justify-content: center;
+    }
   }
 
   /* .plan__item */
@@ -1666,7 +1693,7 @@
   /* .plan__advantages-img */
 
   &__advantages-img {
-    margin-bottom: 26px;
+    @include adaptiveValue("margin-bottom", 26, 13);
     width: 50px;
     height: 50px;
   }
@@ -1691,6 +1718,7 @@
     color: rgb(255, 255, 255);
     font-family: TTNorms;
     font-size: 16px;
+    @include adaptiveValue("font-size", 16, 14);
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 0px;
