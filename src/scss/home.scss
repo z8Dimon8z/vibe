@@ -1176,28 +1176,28 @@
 
   /* .coworking__container */
   color: rgb(52, 52, 63);
-  padding-top: 150px;
-  padding-bottom: 150px;
+  @include adaptiveValue("padding-top", 150, 75);
+  @include adaptiveValue("padding-bottom", 150, 75);
 
   &__container {}
 
   /* .coworking__top */
 
   &__top {
-    margin-bottom: 42px;
+    @include adaptiveValue("margin-bottom", 42, 21);
   }
 
   /* .coworking__title */
 
   &__title {
     font-family: TenorSans;
-    font-size: 50px;
+    @include adaptiveValue("font-size", 50, 25);
     font-weight: 400;
     line-height: -1px;
     text-align: center;
-    max-width: 838px;
+    @include adaptiveValue("max-width", 838, 419);
     margin: 0 auto;
-    margin-bottom: 24px;
+    @include adaptiveValue("margin-bottom", 24, 12);
 
     span {
       color: rgb(206, 148, 107);
@@ -1209,13 +1209,13 @@
   &__description {
     color: rgb(52, 52, 63);
     font-family: TT Norms;
-    font-size: 20px;
+    @include adaptiveValue("font-size", 20, 14);
     font-weight: 400;
     line-height: 32px;
     text-align: center;
     margin: 0 auto;
-    max-width: 905px;
-    margin-bottom: 30px;
+    @include adaptiveValue("max-width", 905, 452);
+    @include adaptiveValue("margin-bottom", 30, 15);
 
     span {
       font-weight: 700;
@@ -1240,6 +1240,10 @@
       top: -15%;
       right: 5%;
       z-index: -1;
+
+      @media (max-width: em(1016)) {
+        display: none;
+      }
     }
 
     &::before {
@@ -1252,25 +1256,32 @@
       bottom: -15%;
       left: 5%;
       z-index: -1;
+
+      @media (max-width: em(1016)) {
+        display: none;
+      }
     }
 
   }
 
   /* .coworking__img */
 
-  &__img {}
+  &__img {
+    @include adaptiveValue("width", 720, 288);
+    @include adaptiveValue("height", 395, 158);
+  }
 
   /* .coworking__text */
 
   &__text {
     font-family: TenorSans;
-    font-size: 22px;
+    @include adaptiveValue("font-size", 22, 14);
     font-weight: 400;
     line-height: 23px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 55px;
-    margin-bottom: 23px;
+    @include adaptiveValue("margin-top", 55, 27);
+    @include adaptiveValue("margin-bottom", 23, 11);
   }
 
   /* .coworking__box */
@@ -1279,7 +1290,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 105px;
+    @include adaptiveValue("gap", 105, 52);
+
+    @media (max-width: em(658)) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
   }
 
   /* .coworking__list */
@@ -1289,8 +1306,8 @@
   /* .coworking__item */
 
   &__item {
-    margin-bottom: 10px;
-    padding-left: 35px;
+    @include adaptiveValue("margin-bottom", 10, 5);
+    @include adaptiveValue("padding-left", 35, 30);
     color: rgb(52, 52, 63);
     font-family: TTNorms;
     font-size: 14px;
@@ -1326,18 +1343,31 @@
 
   /* .coworking__slide */
 
-  &__slide {}
+  &__slide {
+    @media (max-width: em(988)) {
+      padding-bottom: 70px;
+    }
+  }
 
   /* .coworking__wrapp */
 
   &__wrapp {
     display: flex;
-    gap: 64px;
+    @include adaptiveValue("gap", 64, 32);
+
+    @media (max-width: em(678)) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0px;
+    }
   }
 
   /* .coworking__slider-img */
 
-  &__slider-img {}
+  &__slider-img {
+    @include adaptiveValue("width", 519, 259);
+    @include adaptiveValue("height", 411, 205);
+  }
 
   /* .coworking__slider-content */
 
@@ -1347,15 +1377,21 @@
 
   &__slider-title {
     padding-top: 32px;
+    @include adaptiveValue("padding-top", 32, 16);
     color: rgb(52, 52, 63);
     font-family: TTNorms;
     font-size: 40px;
+    @include adaptiveValue("font-size", 40, 20);
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
     text-align: left;
-    max-width: 338px;
-    margin-bottom: 20px;
+    @include adaptiveValue("max-width", 338, 169);
+    @include adaptiveValue("margin-bottom", 20, 10);
+
+    @media (max-width: em(988)) {
+      padding-top: 0;
+    }
   }
 
   /* .coworking__slider-text */
@@ -1363,13 +1399,13 @@
   &__slider-text {
     color: rgb(52, 52, 63);
     font-family: TTNorms;
-    font-size: 16px;
+    @include adaptiveValue("font-size", 16, 14);
     font-weight: 300;
     line-height: 26px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 45px;
-    max-width: 536px;
+    @include adaptiveValue("max-width", 536, 268);
+    @include adaptiveValue("margin-bottom", 45, 15);
   }
 
   /* .coworking__slider-btn */
@@ -1389,22 +1425,27 @@
   }
 }
 
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
 .coworking__slider .swiper-pagination {
   left: 65%;
-  bottom: 13%;
+  bottom: 8%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: em(988)) {
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: em(678)) {
+    left: 50%;
+    bottom: 0%;
+  }
 }
 
 .coworking__slider .swiper-pagination-current {
   color: rgb(75, 77, 69);
   font-family: TenorSans;
-  font-size: 50px;
+  @include adaptiveValue("font-size", 50, 25);
   font-weight: 400;
   line-height: -1px;
   letter-spacing: -0.5px;
@@ -1413,30 +1454,58 @@
   margin-right: 2px;
 }
 
-.coworking__slider .swiper-pagination-total{
+.coworking__slider .swiper-pagination-total {
   color: rgb(75, 77, 69);
-font-family: TenorSans;
-font-size: 20px;
-font-weight: 400;
-line-height: -1px;
-letter-spacing: -0.2px;
-text-align: left;
-text-transform: uppercase;
-margin-left: 2px;
+  font-family: TenorSans;
+  @include adaptiveValue("font-size", 20, 14);
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 2px;
 }
 
-.s-button-prev {
+.coworking__slider .s-button-prev {
   position: absolute;
-  top: 76%;
+  top: 80%;
   left: 58%;
   z-index: 50;
   transform: translate(-50%, -50%);
+
+  @media (max-width: em(988)) {
+    top: 89%;
+    left: 42%;
+  }
+
+  @media (max-width: em(678)) {
+    top: 94%;
+    left: 41%;
+  }
+
+  @media (max-width: em(534)) {
+    left: 30%;
+  }
 }
 
-.s-button-next {
+.coworking__slider .s-button-next {
   position: absolute;
-  top: 76%;
+  top: 80%;
   left: 72%;
   transform: translate(-50%, -50%);
   z-index: 50;
+
+  @media (max-width: em(988)) {
+    top: 89%;
+    left: 58%;
+  }
+
+  @media (max-width: em(678)) {
+    top: 94%;
+    left: 59%;
+  }
+
+  @media (max-width: em(534)) {
+    left: 71%;
+  }
 }
