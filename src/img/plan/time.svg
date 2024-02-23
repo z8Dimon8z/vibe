@@ -1,0 +1,16 @@
+<svg width="54.000000" height="54.000000" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient id="paint_linear_0_1020_0" x1="-5.405720" y1="24.388245" x2="26.393028" y2="60.061588" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#F8E6E2"/>
+			<stop offset="1.000000" stop-color="#B0776B"/>
+		</linearGradient>
+	</defs>
+	<mask id="mask_0_1020" fill="white">
+		<path id="Combined Shape" d="M0 27C0 12.1123 12.1125 0 27 0C41.8875 0 54 12.1123 54 27C54 41.8877 41.8875 54 27 54C12.1125 54 0 41.8877 0 27ZM3.375 27C3.375 40.0269 13.973 50.625 27 50.625C40.027 50.625 50.625 40.0269 50.625 27C50.625 13.9731 40.027 3.375 27 3.375C13.973 3.375 3.375 13.9731 3.375 27ZM25 10L28.3735 10L28.3735 26.0654L38 35.6299L35.6148 38L25 27.4531L25 10Z" clip-rule="evenodd" fill="" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</mask>
+	<path id="Combined Shape" d="M0 27C0 12.1123 12.1125 0 27 0C41.8875 0 54 12.1123 54 27C54 41.8877 41.8875 54 27 54C12.1125 54 0 41.8877 0 27ZM3.375 27C3.375 40.0269 13.973 50.625 27 50.625C40.027 50.625 50.625 40.0269 50.625 27C50.625 13.9731 40.027 3.375 27 3.375C13.973 3.375 3.375 13.9731 3.375 27ZM25 10L28.3735 10L28.3735 26.0654L38 35.6299L35.6148 38L25 27.4531L25 10Z" clip-rule="evenodd" fill="url(#paint_linear_0_1020_0)" fill-opacity="1.000000" fill-rule="evenodd" mask="url(#mask_0_1020)"/>
+	<path id="Combined Shape" d="" fill="#979797" fill-opacity="0.000000" fill-rule="nonzero"/>
+</svg>
