@@ -1788,6 +1788,38 @@
 .advantage {
   background-color: rgb(54, 51, 72);
   @include adaptiveValue("padding-bottom", 80, 40);
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('@img/advances/bg-decor-left.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 900px;
+    height: 900px;
+    bottom: 0%;
+    left: -20%;
+
+    @media (max-width: em(1983)) {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('@img/advances/ribbon-decor-right.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 710px;
+    top: 5%;
+    right: -5%;
+
+    @media (max-width: em(1983)) {
+      display: none;
+    }
+  }
 
   /* .advantage__box */
 
@@ -1934,6 +1966,6 @@ text-align: left;
 @include adaptiveValue("margin-left", 70, 35);
   }
   &__text_wight{
-    @include adaptiveValue("max-width", 470, 235);
+    @include adaptiveValue("max-width", 470, 190);
   }
 }
