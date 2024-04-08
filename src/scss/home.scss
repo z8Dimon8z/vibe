@@ -1787,9 +1787,7 @@
 // ========================
 .advantage {
   background-color: rgb(54, 51, 72);
-  /* .advantage__container */
-
-  &__container {}
+  @include adaptiveValue("padding-bottom", 80, 40);
 
   /* .advantage__box */
 
@@ -1818,15 +1816,15 @@
 
   &__title {
     font-family: TenorSans;
-    max-width: 838px;
-    font-size: 50px;
+    @include adaptiveValue("max-width", 838, 279);
+    @include adaptiveValue("font-size", 50, 25);
     font-weight: 400;
     line-height: -1px;
     letter-spacing: 0px;
     text-align: center;
     text-transform: uppercase;
     margin: 0 auto;
-    margin-bottom: 24px;
+    @include adaptiveValue("margin-bottom", 24, 12);
 
     span {
       color: rgb(206, 148, 107);
@@ -1837,12 +1835,12 @@
 
   &__description {
     font-family: TT Norms;
-    font-size: 20px;
+    @include adaptiveValue("font-size", 20, 14);
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
     text-align: center;
-    max-width: 838px;
+    @include adaptiveValue("max-width", 838, 300);
     margin: 0 auto;
 
     span {
@@ -1856,11 +1854,11 @@
     text-align: right;
     color: rgb(255, 255, 255);
     font-family: TenorSans;
-    font-size: 120px;
+    @include adaptiveValue("font-size", 120, 40);
     font-weight: 400;
-    line-height: 80px;
+    @include adaptiveValue("line-height", 80, 40);
     letter-spacing: 0px;
-    max-width: 732px;
+    @include adaptiveValue("max-width", 732, 292);
     opacity: 0.06;
     margin-right: 0;
     align-self: flex-end;
@@ -1872,14 +1870,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: em(726)){
+        flex-direction: column;
+        justify-content: center;
+    }
   }
 
   /* .advantage__img */
 
-  &__img {}
+  &__img {
+    @include adaptiveValue("width", 650, 320);
+    @include adaptiveValue("height", 750, 320);
+  }
 
   &__img_right{
     order: 1;
+    @media (max-width: em(726)){
+       order: 0; 
+    };
   }
 
 
@@ -1901,6 +1909,7 @@
       transparent;
     font-family: TenorSans;
     font-size: 300px;
+    @include adaptiveValue("font-size", 300, 150);
     font-weight: 400;
     line-height: -1px;
     letter-spacing: 0px;
@@ -1915,15 +1924,16 @@
     color: rgb(255, 255, 255);
 font-family: TenorSans;
 font-size: 30px;
+@include adaptiveValue("font-size", 30, 15);
 font-weight: 400;
-line-height: 40px;
+@include adaptiveValue("line-height", 40, 20);
 letter-spacing: 0px;
 text-align: left;
-max-width: 380px;
-margin-top: -72px;
-margin-left: 70px;
+@include adaptiveValue("max-width", 380, 190);
+@include adaptiveValue("margin-top", -72, -36);
+@include adaptiveValue("margin-left", 70, 35);
   }
   &__text_wight{
-    max-width: 470px;
+    @include adaptiveValue("max-width", 470, 235);
   }
 }
