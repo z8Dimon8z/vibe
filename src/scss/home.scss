@@ -1916,10 +1916,10 @@
   }
 
   &__img_right{
-    order: 1;
+    order: -1;
     @media (max-width: em(726)){
        order: 0; 
-    };
+    }
   }
 
 
