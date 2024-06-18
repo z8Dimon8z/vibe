@@ -1,3 +1,59 @@
 //====================================================================================================
+.footer {
+  @include adaptiveValue("padding-top", 124, 62);
+  @include adaptiveValue("padding-bottom", 111, 55);
+		/* .footer__container */
+
+		&__container {
+		}
+
+		/* .footer__logo */
+
+		&__logo {
+      display: block;
+      margin-bottom: 30px;
+		}
+
+		/* .footer__wrapp */
+
+		&__wrapp {
+      display: flex;
+      align-items: center;
+      gap: 46px;
+      @media (max-width: em(452)){
+         flex-direction: column; 
+      }
+		}
+
+		/* .footer__social */
+
+		&__social {
+		}
+
+		/* .footer__social-inatagram */
+
+		&__social-inatagram {
+		}
+
+		/* .footer__social-viber */
+
+		&__social-viber {
+		}
+
+		/* .footer__telefone */
+
+		&__telefone {
+      display: flex;
+      flex-direction: column;
+		}
+}
+.footer-img {
+  @include adaptiveValue("height",54, 52);
+  @include adaptiveValue("width", 170, 160);
+}
+.footer-link-tel {
+  color: black;
+  font-size: 27px;
+}
 
 //====================================================================================================
